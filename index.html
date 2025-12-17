@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RenzzX Store - Produk Digital Lengkap</title>
+<style>
+body { font-family: Arial, sans-serif; background:#ffe4ef; margin:0; color:#374151; }
+header { background:#fff; padding:20px; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,.1); }
+h1 { color:#ec4899; margin:0; }
+.container { max-width:1000px; margin:auto; padding:20px; }
+h2 { color:#be185d; border-bottom:3px solid #ec4899; padding-bottom:5px; }
+.product { display:flex; justify-content:space-between; align-items:center; background:#fff; padding:10px 15px; margin:8px 0; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,.08); }
+.product span { flex:1; }
+.price { font-weight:bold; color:#ec4899; margin-right:15px; }
+button { background:#ec4899; color:#fff; border:none; padding:6px 12px; border-radius:8px; cursor:pointer; }
+button:hover { background:#db2777; }
+.cart { position:fixed; bottom:20px; right:20px; background:#ec4899; color:#fff; padding:14px 20px; border-radius:40px; cursor:pointer; }
+.hero { display:flex; gap:20px; align-items:center; margin-bottom:20px; }
+.hero img { width:180px; border-radius:16px; }
+.search input { width:100%; padding:12px; border-radius:10px; border:1px solid #f9a8d4; margin-bottom:20px; }
+footer { background:#fff; text-align:center; padding:15px; margin-top:30px; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>RenzzX Store</h1>
+<p>Produk Digital • Order Otomatis WhatsApp</p>
+</header>
+
+<div class="container">
+<div class="hero">
+<img src="https://i.imgur.com/9QO4FqC.png" alt="Anya Forger">
+<div>
+<h2>Selamat Datang 💖</h2>
+<p>Order cepat, aman, langsung ke WhatsApp admin</p>
+</div>
+</div>
+
+<div class="search">
+<input id="searchInput" placeholder="Cari produk..." onkeyup="searchProduct()">
+</div>
+
+<script>
+let cart=[];
+function add(p,h){ cart.push({p,h}); alert(p+' ditambahkan ke keranjang'); }
+function checkout(){
+if(!cart.length){ alert('Keranjang kosong'); return; }
+let t='Halo Admin RenzzX Store%0A%0ASaya mau order:%0A';
+let tot=0;
+cart.forEach((i,n)=>{ t+=`${n+1}. ${i.p} = Rp${i.h}%0A`; tot+=i.h; });
+t+=`%0ATotal: Rp${tot}%0A%0ATerima kasih`;
+window.open('https://wa.me/62882008510359?text='+t);
+}
+function searchProduct(){
+let v=document.getElementById('searchInput').value.toLowerCase();
+document.querySelectorAll('.product').forEach(p=>{
+p.style.display=p.innerText.toLowerCase().includes(v)?'flex':'none';
+});
+}
+</script>
+
+<!-- SUNTIK SOSMED -->
+<h2>⭐ Suntik Sosmed Lengkap</h2>
+<div class="product"><span>100 Likes TikTok</span><span class="price">Rp4.670</span><button onclick="add('100 Likes TikTok',4670)">Pesan</button></div>
+<div class="product"><span>1000 Views TikTok</span><span class="price">Rp4.750</span><button onclick="add('1000 Views TikTok',4750)">Pesan</button></div>
+<div class="product"><span>100 Likes IG Indonesia</span><span class="price">Rp4.751</span><button onclick="add('100 Likes IG Indonesia',4751)">Pesan</button></div>
+<div class="product"><span>200 Likes TikTok</span><span class="price">Rp4.841</span><button onclick="add('200 Likes TikTok',4841)">Pesan</button></div>
+<div class="product"><span>2000 Views TikTok</span><span class="price">Rp4.850</span><button onclick="add('2000 Views TikTok',4850)">Pesan</button></div>
+<div class="product"><span>3000 Views TikTok</span><span class="price">Rp4.950</span><button onclick="add('3000 Views TikTok',4950)">Pesan</button></div>
+<div class="product"><span>200 Likes IG Indonesia</span><span class="price">Rp5.002</span><button onclick="add('200 Likes IG Indonesia',5002)">Pesan</button></div>
+<div class="product"><span>300 Likes TikTok</span><span class="price">Rp5.011</span><button onclick="add('300 Likes TikTok',5011)">Pesan</button></div>
+<div class="product"><span>4000 Views TikTok</span><span class="price">Rp5.050</span><button onclick="add('4000 Views TikTok',5050)">Pesan</button></div>
+<div class="product"><span>5000 Views TikTok</span><span class="price">Rp5.150</span><button onclick="add('5000 Views TikTok',5150)">Pesan</button></div>
+<div class="product"><span>400 Likes TikTok</span><span class="price">Rp5.181</span><button onclick="add('400 Likes TikTok',5181)">Pesan</button></div>
+<div class="product"><span>6000 Views TikTok</span><span class="price">Rp5.250</span><button onclick="add('6000 Views TikTok',5250)">Pesan</button></div>
+<div class="product"><span>7000 Views TikTok</span><span class="price">Rp5.250</span><button onclick="add('7000 Views TikTok',5250)">Pesan</button></div>
+<div class="product"><span>300 Likes IG Indonesia</span><span class="price">Rp5.252</span><button onclick="add('300 Likes IG Indonesia',5252)">Pesan</button></div>
+<div class="product"><span>8000 Views TikTok</span><span class="price">Rp5.350</span><button onclick="add('8000 Views TikTok',5350)">Pesan</button></div>
+<div class="product"><span>500 Likes TikTok</span><span class="price">Rp5.352</span><button onclick="add('500 Likes TikTok',5352)">Pesan</button></div>
+<div class="product"><span>9000 Views TikTok</span><span class="price">Rp5.450</span><button onclick="add('9000 Views TikTok',5450)">Pesan</button></div>
+<div class="product"><span>10000 Views TikTok</span><span class="price">Rp5.750</span><button onclick="add('10000 Views TikTok',5750)">Pesan</button></div>
+<div class="product"><span>50000 Views TikTok</span><span class="price">Rp6.050</span><button onclick="add('50000 Views TikTok',6050)">Pesan</button></div>
+
+<div class="product"><span>500 Likes IG Indonesia</span><span class="price">Rp5.754</span><button onclick="add('500 Likes IG Indonesia',5754)">Pesan</button></div>
+<div class="product"><span>600 Likes IG Indonesia</span><span class="price">Rp6.005</span><button onclick="add('600 Likes IG Indonesia',6005)">Pesan</button></div>
+<div class="product"><span>700 Likes IG Indonesia</span><span class="price">Rp6.256</span><button onclick="add('700 Likes IG Indonesia',6256)">Pesan</button></div>
+<div class="product"><span>800 Likes IG Indonesia</span><span class="price">Rp6.506</span><button onclick="add('800 Likes IG Indonesia',6506)">Pesan</button></div>
+<div class="product"><span>900 Likes IG Indonesia</span><span class="price">Rp6.757</span><button onclick="add('900 Likes IG Indonesia',6757)">Pesan</button></div>
+<div class="product"><span>1000 Likes IG Indonesia</span><span class="price">Rp7.008</span><button onclick="add('1000 Likes IG Indonesia',7008)">Pesan</button></div>
+
+<div class="product"><span>100 Followers IG Indonesia</span><span class="price">Rp6.068</span><button onclick="add('100 Followers IG Indonesia',6068)">Pesan</button></div>
+<div class="product"><span>100 Followers TikTok CHEAPEST</span><span class="price">Rp6.083</span><button onclick="add('100 Followers TikTok CHEAPEST',6083)">Pesan</button></div>
+<div class="product"><span>200 Followers IG No Refill</span><span class="price">Rp8.500</span><button onclick="add('200 Followers IG No Refill',8500)">Pesan</button></div>
+<div class="product"><span>200 Followers IG Indonesia</span><span class="price">Rp9.000</span><button onclick="add('200 Followers IG Indonesia',9000)">Pesan</button></div>
+<div class="product"><span>300 Followers IG Indonesia</span><span class="price">Rp9.204</span><button onclick="add('300 Followers IG Indonesia',9204)">Pesan</button></div>
+<div class="product"><span>300 Followers IG No Refill</span><span class="price">Rp9.624</span><button onclick="add('300 Followers IG No Refill',9624)">Pesan</button></div>
+<div class="product"><span>200 Followers TikTok CHEAPEST</span><span class="price">Rp10.500</span><button onclick="add('200 Followers TikTok CHEAPEST',10500)">Pesan</button></div>
+<div class="product"><span>300 Followers TikTok CHEAPEST</span><span class="price">Rp11.500</span><button onclick="add('300 Followers TikTok CHEAPEST',11500)">Pesan</button></div>
+<div class="product"><span>400 Followers IG Indonesia</span><span class="price">Rp10.772</span><button onclick="add('400 Followers IG Indonesia',10772)">Pesan</button></div>
+<div class="product"><span>400 Followers IG No Refill</span><span class="price">Rp11.332</span><button onclick="add('400 Followers IG No Refill',11332)">Pesan</button></div>
+<div class="product"><span>400 Followers TikTok CHEAPEST</span><span class="price">Rp14.500</span><button onclick="add('400 Followers TikTok CHEAPEST',14500)">Pesan</button></div>
+<div class="product"><span>500 Followers IG Indonesia</span><span class="price">Rp12.340</span><button onclick="add('500 Followers IG Indonesia',12340)">Pesan</button></div>
+<div class="product"><span>500 Followers IG No Refill</span><span class="price">Rp13.040</span><button onclick="add('500 Followers IG No Refill',13040)">Pesan</button></div>
+<div class="product"><span>500 Followers TikTok CHEAPEST</span><span class="price">Rp15.500</span><button onclick="add('500 Followers TikTok CHEAPEST',15500)">Pesan</button></div>
+<div class="product"><span>600 Followers IG Indonesia</span><span class="price">Rp13.908</span><button onclick="add('600 Followers IG Indonesia',13908)">Pesan</button></div>
+<div class="product"><span>600 Followers IG No Refill</span><span class="price">Rp14.748</span><button onclick="add('600 Followers IG No Refill',14748)">Pesan</button></div>
+<div class="product"><span>600 Followers TikTok CHEAPEST</span><span class="price">Rp13.999</span><button onclick="add('600 Followers TikTok CHEAPEST',13999)">Pesan</button></div>
+<div class="product"><span>700 Followers IG Indonesia</span><span class="price">Rp15.476</span><button onclick="add('700 Followers IG Indonesia',15476)">Pesan</button></div>
+<div class="product"><span>700 Followers IG No Refill</span><span class="price">Rp16.456</span><button onclick="add('700 Followers IG No Refill',16456)">Pesan</button></div>
+<div class="product"><span>700 Followers TikTok CHEAPEST</span><span class="price">Rp15.582</span><button onclick="add('700 Followers TikTok CHEAPEST',15582)">Pesan</button></div>
+<div class="product"><span>800 Followers IG Indonesia</span><span class="price">Rp17.044</span><button onclick="add('800 Followers IG Indonesia',17044)">Pesan</button></div>
+<div class="product"><span>800 Followers IG No Refill</span><span class="price">Rp18.164</span><button onclick="add('800 Followers IG No Refill',18164)">Pesan</button></div>
+<div class="product"><span>800 Followers TikTok CHEAPEST</span><span class="price">Rp17.166</span><button onclick="add('800 Followers TikTok CHEAPEST',17166)">Pesan</button></div>
+<div class="product"><span>900 Followers IG Indonesia</span><span class="price">Rp18.612</span><button onclick="add('900 Followers IG Indonesia',18612)">Pesan</button></div>
+<div class="product"><span>900 Followers IG No Refill</span><span class="price">Rp19.872</span><button onclick="add('900 Followers IG No Refill',19872)">Pesan</button></div>
+<div class="product"><span>900 Followers TikTok CHEAPEST</span><span class="price">Rp25.500</span><button onclick="add('900 Followers TikTok CHEAPEST',25500)">Pesan</button></div>
+<div class="product"><span>1000 Followers IG Indonesia</span><span class="price">Rp27.500</span><button onclick="add('1000 Followers IG Indonesia',27500)">Pesan</button></div>
+<div class="product"><span>1000 Followers IG No Refill</span><span class="price">Rp21.580</span><button onclick="add('1000 Followers IG No Refill',21580)">Pesan</button></div>
+<div class="product"><span>1000 Followers TikTok CHEAPEST</span><span class="price">Rp27.500</span><button onclick="add('1000 Followers TikTok CHEAPEST',27500)">Pesan</button></div>
+
+<!-- NOKOS WA -->
+<h2>⭐ Nokos WhatsApp</h2>
+<div class="product"><span>NOKOS INDONESIA</span><span class="price">Rp11.500</span><button onclick="add('NOKOS INDONESIA',11500)">Pesan</button></div>
+<div class="product"><span>NOKOS FILIPINA</span><span class="price">Rp13.500</span><button onclick="add('NOKOS FILIPINA',13500)">Pesan</button></div>
+<div class="product"><span>NOKOS MALAYSIA</span><span class="price">Rp18.500</span><button onclick="add('NOKOS MALAYSIA',18500)">Pesan</button></div>
+<div class="product"><span>NOKOS THAILAND</span><span class="price">Rp18.500</span><button onclick="add('NOKOS THAILAND',18500)">Pesan</button></div>
+
+<!-- BOT PO WA -->
+<h2>⭐ Bot PO WhatsApp</h2>
+<div class="product"><span>Bot PO Vitur 800+</span><span class="price">Rp8.500</span><button onclick="add('Bot PO Vitur 800+',8500)">Pesan</button></div>
+<div class="product"><span>Bot PO Vitur 1000+</span><span class="price">Rp11.500</span><button onclick="add('Bot PO Vitur 1000+',11500)">Pesan</button></div>
+<div class="product"><span>Bot PO Vitur 2100+</span><span class="price">Rp15.500</span><button onclick="add('Bot PO Vitur 2100+',15500)">Pesan</button></div>
+<div class="product"><span>Bot PO All Vitur</span><span class="price">Rp18.500</span><button onclick="add('Bot PO All Vitur',18500)">Pesan</button></div>
+
+</div>
+
+<div class="cart" onclick="checkout()">🛒 Checkout WA</div>
+
+<footer>© 2025 RenzzX Store</footer>
+</body>
+</html>
